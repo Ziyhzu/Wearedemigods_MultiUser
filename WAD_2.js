@@ -26,6 +26,7 @@ const DEFAULT_OPT = {
     addIcon: `+`,
     errorMsg: 'Error en el gestor de multi cuenta',
     confirmMsg: '¿Estás seguro que quieres cambiar de personaje?',
+    confirmDelete: '¿Estás seguro que quieres eliminar el personaje del sistema de multi usuario?',
     modal: {}
 };
 
@@ -99,6 +100,19 @@ function extend(obj1, obj2) {
                 }
             }
         });
+        
+        document.delegateEventListener('click', '[data-action="delete-user"]', function (e) {
+        if (t.options.confirm) {
+            var r = confirm(t.lang.msg.confirmDelete);
+            if (r == true) {
+                // Lógica para eliminar el usuario aquí
+                t.deleteUser(this);
+            }
+        } else {
+            // Lógica para eliminar el usuario aquí
+            t.deleteUser(this);
+        }
+    });
 
     };
 
