@@ -1,17 +1,17 @@
 const DEFAULT_LANG = {
     button: {
-        add: "Associer un personnage"
+        add: "Añadir nuevo personaje"
     },
     msg: {
-        error: "Une erreur est surviendu lors du Switcheroo.",
-        confirm: "Confirmer le Switcheroo de personnage ?"
+        error: "Error en el gestor de multi cuenta",
+        confirm: "¿Estás seguro que quieres cambiar de personaje?"
     },
     modal: {
         password_placeholder: "",
-        password_label: "Mot de passe",
-        username_label: "Nom d'utilisateur",
+        password_label: "Contraseña",
+        username_label: "Nombre de usuario",
         username_placholder: "",
-        login_button: "Connexion"
+        login_button: "Conectarse"
     }
 };
 
@@ -24,8 +24,8 @@ const DEFAULT_OPT = {
     blockClass: 'switcheroo',
     deleteIcon: `×`,
     addIcon: `+`,
-    errorMsg: 'Une erreur est surviendue lors du Switcheroo.',
-    confirmMsg: 'Confirmer le Switcheroo de personnage ?',
+    errorMsg: 'Error en el gestor de multi cuenta',
+    confirmMsg: '¿Estás seguro que quieres cambiar de personaje?',
     modal: {}
 };
 
