@@ -101,18 +101,19 @@ function extend(obj1, obj2) {
             }
         });
         
-        document.addEventListener('click', '.switcheroo__delete', function (e) {
-        if (t.options.confirm) {
-            var r = confirm(t.lang.msg.confirmDelete);
-            if (r == true) {
-                // Lógica para eliminar el usuario aquí
-                t.deleteUser(this);
-            }
-        } else {
+        $(document).on('click', '.switcheroo__delete', function (e) {
+    var t = this;
+    if (t.options.confirm) {
+        var r = confirm(t.lang.msg.confirmDelete);
+        if (r == true) {
             // Lógica para eliminar el usuario aquí
             t.deleteUser(this);
         }
-    });
+    } else {
+        // Lógica para eliminar el usuario aquí
+        t.deleteUser(this);
+    }
+});
 
     };
 
