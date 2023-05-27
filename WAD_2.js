@@ -320,7 +320,7 @@ function extend(obj1, obj2) {
         if (this.options.enableReorder) {
             del.draggable = false;
         }
-        del.dataset.action = 'delete-user';
+        del.setAttribute('data-action', 'delete-user');
         del.innerHTML = this.options.deleteIcon;
         list.appendChild(del);
 
