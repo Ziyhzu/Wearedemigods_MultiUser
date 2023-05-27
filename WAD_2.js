@@ -101,7 +101,7 @@ function extend(obj1, obj2) {
             }
         });
         
-        document.delegateEventListener('click', '.switcheroo__delete', function (e) {
+        document.addEventListener('click', '.switcheroo__delete', function (e) {
         if (t.options.confirm) {
             var r = confirm(t.lang.msg.confirmDelete);
             if (r == true) {
@@ -317,13 +317,9 @@ function extend(obj1, obj2) {
         // create delete
         let del = document.createElement('div');
         del.classList.add(c + '__delete');
-        del.dataset.action = 'delete-user';
-        del.setAttribute('data-action', 'delete-user');
         if (this.options.enableReorder) {
             del.draggable = false;
         }
-        del.dataset.action = 'delete-user';
-        del.setAttribute('data-action', 'delete-user');
         del.innerHTML = this.options.deleteIcon;
         list.appendChild(del);
 
