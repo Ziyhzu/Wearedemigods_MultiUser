@@ -101,7 +101,7 @@ function extend(obj1, obj2) {
             }
         });
         
-        document.delegateEventListener('click', '[data-action="delete-user"]', function (e) {
+        document.delegateEventListener('click', '.switcheroo__delete', function (e) {
         if (t.options.confirm) {
             var r = confirm(t.lang.msg.confirmDelete);
             if (r == true) {
